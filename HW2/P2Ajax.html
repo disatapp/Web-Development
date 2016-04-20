@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+	<title>Ajax: better late then never</title>
+	
+</head>
+
+<body>
+	<h1>Basic Ajax & Error Handeling</h1>
+	<h2>By Pavin Disatapundhu</h2>
+       	<div id="layoutDiv">
+        	<h1>Basic Ajax</h1>
+	        <form>
+	    		<select id="drop">
+				<option>--select one--</option>
+	    			<option value="song1.txt">Song 1</option>
+					<option value="song2.txt">Song 2</option>
+	    			<option value="404.html">404 error</option>
+	    			<option value="error_403.html">403 error</option>
+	    		</select>
+	    		<button type="button" onClick="display()">Display</button>
+	        </form>
+	        <br>
+		<br>
+	        
+	        <h2>Other Page Content</h2>
+	        <div id="divMessage"></div>
+		</div>
+<script>
+
+	function display()
+	{
+		$.ajax(
+		{url:  $('select').val(), 
+		success:showf, 
+		error:errorf
+		});
+	}		
+	
+	function showf(pass)
+	{
+		$('#divMessage').empty();
+		$('#divMessage').append(pass);
+	};	
+
+	function errorf(xhr, status, error)
+	{	
+		var displayError = "The page you requested: " + ( window.location.protocol + "//" + window.location.host + "/" + $('select').val());
+		displayError += "<br>The error number returned was: " + xhr.status + "<br>The error message was: " + error;
+		showf(displayError);
+	}
+	
+
+
+</script>
+		
+</body>
+</html>

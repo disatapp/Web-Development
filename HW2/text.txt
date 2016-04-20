@@ -1,0 +1,6 @@
+<root>
+<item><name>a</name></item>
+<item><name>b</name></item>
+<item><name>c</name></item>
+<item><name>d</name></item>
+</root>

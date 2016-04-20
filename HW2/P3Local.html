@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+	<title>LS&amp;EH:almost there</title>
+</head>
+
+<body>
+	<h1>Local Storage and Error Handling</h1>
+	<h2>By Pavin Disatapundhu</h2>
+	
+       	<div id="layoutDiv">
+        	<h1>Local Storage</h1>
+	        <form>
+				Enter a string: <input id="stringvalue"/><br>
+	    		<button type = "button" onClick = "saveS()">Save String</button>
+				<button type = "button" onClick = "clearS()">Clear String</button>
+				<button type = "button" onClick = "prependS()">Prepend</button>
+	    		<button type = "button" onClick = "appendS()">Append</button>
+				<button type = "button" onClick = "displayS()">Display String</button>
+	        </form>
+		</div>
+	    <br>
+		<br>
+
+	<h2>Display Output</h2><div id="output"></div>
+
+<script>		
+	<!--source: http://stackoverflow.com/questions/14154478/javascript-try-catch-for-localstorage-detection-->
+	function localS(){
+		try{
+			return 'localStorage' in window && window['localStorage'] !== null;
+		}
+		catch(e){
+			return false;
+		}
+	}
+	
+	function saveS()
+	{
+		if (!localS())
+		{
+			errorf();
+		}
+		else
+		{
+			localStorage.string = $('#stringvalue').val();
+		}
+	}
+		
+	function clearS()
+	{
+		if (!localS()){
+			errorf();
+		}
+		else{
+			localStorage.clear();
+		}
+	}
+	function prependS(){
+		if (!localS()){
+			errorf();
+		}
+		else{
+			localStorage.string = $('#stringvalue').val()+ localStorage.string;
+		}
+	}
+	
+	function appendS(){
+		if (!localS()){
+			errorf();
+		}
+		else{
+			localStorage.string = localStorage.string + $('#stringvalue').val();
+		}
+	}
+	
+	function displayS(){
+		if (!localS()){
+			errorf();
+		}
+		else{
+			$('#output').empty();
+			$('#output').append(localStorage.string);
+		}
+	}
+	
+	function errorf() 
+	{
+	$('#output').empty();
+	$('#output').append("<br>Local storage is disabled on the client");
+}
+	
+</script>	
+</body>
+
+</html>	        

@@ -1,0 +1,55 @@
+#forminput {
+	 text-align: center
+}
+
+
+label.error {
+    color: red;
+}
+input.error {
+    color: red;
+}
+
+
+.form-custom { 
+display: inline-block;
+text-align: left; 
+padding: 10px; 
+width: auto;  
+background: #FAFAFA;
+padding:20px 20px; 
+-webkit-box-shadow: 4px 9px 30px 0px rgba(46, 50, 50, 0.38);
+-moz-box-shadow:    4px 9px 30px 0px rgba(46, 50, 50, 0.38);
+box-shadow:         4px 9px 30px 0px rgba(46, 50, 50, 0.38);
+}
+
+p{
+	text-align: right;
+}
+a{
+	text-align: right;
+}
+
+
+.right-side{
+	float:right;
+}
+
+td{
+text-align:center;
+
+}
+
+.container{
+
+background: #FAFAFA;
+}
+
+body{
+
+	background: url('https://farm4.staticflickr.com/3883/14154051007_b272a3a33f_k.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}

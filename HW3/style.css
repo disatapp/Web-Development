@@ -1,0 +1,33 @@
+html{
+background-color:#121212;
+color:#E6E6E6;
+font-family:Arial;
+}
+
+body{
+text-align:center;
+}
+
+#Maketable{
+text-align:center;
+}
+h1 {
+font-size:2.5em;
+}
+
+h2 {
+font-size:1.875em;
+}
+table{
+table-align:center;
+}
+
+table, td{
+border:1px solid #E6E6E6;
+
+}
+
+th{background-color:#C8C8C8;
+color:black;
+text-align:center
+}

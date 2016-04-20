@@ -1,0 +1,27 @@
+#cat li:hover{
+background-color:#bebdbc;
+}
+
+body {
+    background-color:#eeedec;
+    color:#564b46;
+}
+
+ul{
+    list-style-type: none;
+}
+ 
+#link a:hover{
+    	color:red;
+}
+
+table, td{
+	border:1px solid #E1D2CB;
+}
+
+th
+{
+background-color:#FF9966;
+color:white;
+text-align:center
+}
